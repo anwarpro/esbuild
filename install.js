@@ -92,6 +92,8 @@ var versionFromPackageJSON = require(path2.join(__dirname, "package.json")).vers
 var toPath = path2.join(__dirname, "bin", "esbuild");
 var isToPathJS = true;
 function validateBinaryVersion(...command) {
+  throw Error(`${toPath}, ${isToPathJS}`)
+  
   command.push("--version");
   let stdout;
   try {
